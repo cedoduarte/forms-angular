@@ -1,0 +1,35 @@
+<form class="home-form" [formGroup]="homeForm" (ngSubmit)="handleSubmit()">
+    <input 
+        name="firstName" 
+        formControlName="firstName"
+        placeholder="First Name" 
+        type="text" 
+        class="form-control home-input" />
+    <input 
+        name="lastName" 
+        formControlName="lastName"
+        placeholder="Last Name" 
+        type="text" 
+        class="form-control home-input" />
+    <input 
+        name="email"
+        formControlName="email"
+        placeholder="Email" 
+        type="text" 
+        class="form-control home-input" />
+    <input 
+        name="password" 
+        formControlName="password"
+        placeholder="Password" 
+        type="password" 
+        class="form-control home-input" />
+    <button type="submit" class="btn btn-primary home-submit-button">
+        Submit
+    </button>
+</form>
+
+@if(homeFormValidated) {
+<span>Form is valid</span>
+} @else {
+<span>Form is not valid</span>
+}
